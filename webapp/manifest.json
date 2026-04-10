@@ -1,0 +1,21 @@
+{
+  "_version": "1.12.0",
+  "sap.app": {
+    "id": "app",
+    "type": "application",
+    "title": "Bank App"
+  },
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "app.view.Main",
+      "type": "XML",
+      "async": true,
+      "id": "idMain"
+    },
+    "dependencies": {
+      "libs": {
+        "sap.m": {}
+      }
+    }
+  }
+}

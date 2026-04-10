@@ -1,0 +1,45 @@
+<mvc:View
+    controllerName="app.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page title="Bank Management System">
+        <content>
+
+            <VBox class="sapUiSmallMargin">
+
+                <Input id="nameInput" placeholder="Enter Name"/>
+                <Input id="balanceInput" placeholder="Enter Balance"/>
+
+                <Button text="Add Account" press="onAddAccount"/>
+                <Input
+                    placeholder="Search by name"
+                    liveChange="onSearch"/>
+
+                <Table id="accountTable" items="{/accounts}">
+                    <columns>
+                        <Column>
+                            <Text text="Name"/>
+                        </Column>
+                        <Column>
+                            <Text text="Balance"/>
+                        </Column>
+                    </columns>
+
+                    <items>
+                        <ColumnListItem>
+                            <cells>
+                            <Text text="{name}"/>
+                            <Text text="{balance}"/>
+                            <Button text="Delete" type="Reject" press="onDelete"/>
+                        </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+
+            </VBox>
+
+        </content>
+    </Page>
+
+</mvc:View>
